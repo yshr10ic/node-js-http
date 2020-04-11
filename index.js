@@ -62,7 +62,7 @@ const server = http
           .on('end', () => {
             const qs = require('querystring');
             const decoded = decodeURIComponent(rawData);
-            console.info('[' + now + '] 投稿: ' + decoded);
+            console.info('投稿: ' + decoded);
             const answer = qs.parse(decoded);
             res.write('<!DOCTYPE html><html lang="ja"><body><h1>' +
               answer['name'] + 'さんは' + answer['favorite'] +
